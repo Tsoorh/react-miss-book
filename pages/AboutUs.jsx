@@ -2,7 +2,7 @@ import { utilService } from "../services/util.service.js"
 
 const {useRef} = React
 
-export function About() {
+export function AboutUs() {
     const titleRef = useRef()
     return (
         <section className="about">

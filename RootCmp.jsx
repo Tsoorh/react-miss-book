@@ -1,8 +1,9 @@
 import { AppHeader } from "./cmps/AppHeader.jsx"
-import { Home } from "./pages/Home.jsx"
-import { About } from "./pages/About.jsx"
+import { HomePage } from "./pages/HomePage.jsx"
+import { AboutUs } from "./pages/AboutUs.jsx"
+import { BookIndex } from "./pages/BookIndex.jsx"
 
-const {useState } = React
+const {useState} = React
 
 export function RootCmp() {
     const [page, setPage] = useState('home')
@@ -11,8 +12,9 @@ export function RootCmp() {
                 <AppHeader page={page} onSetPage={setPage} />
                 <main>
                     <main>
-                        {page === 'home' && <Home />}
-                        {page === 'about' && <About />}
+                        {page === 'home' && <HomePage />}
+                        {page === 'about' && <AboutUs />}
+                        {page === 'books' && <BookIndex />}
                     </main>
                 </main>
             </section>
