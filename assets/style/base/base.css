@@ -30,7 +30,9 @@ a {
   cursor: pointer;
 }
 
-
+main{
+  width: 100%;
+}
 
 /* Dont stretch my Media */
 img,
