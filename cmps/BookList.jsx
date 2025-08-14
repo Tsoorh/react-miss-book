@@ -1,7 +1,8 @@
 const { useState,useEffect } = React;
 import { bookService } from "../services/book.service.js";
+import { BookPreview } from "./BookPreview.jsx";
 
-export function BookIndex(props) {
+export function BookList(props) {
   const [books, setBooks] = useState([]);
 
   useEffect(()=>{
@@ -19,13 +20,10 @@ export function BookIndex(props) {
     <section className="books-index-container">
       {books.map((book) => {
         return (
-          <div key={book.id} className="book-div">
-            <h3>{book.title}</h3>
-            <p>
-              {book.listPrice.amount} {book.listPrice.currencyCode}
-            </p>
-            <p>{book.listPrice.isOnSale ? "In stock" : "Sold out"} </p>
-          </div>
+                <BookPreview
+                key ={book.id}
+                book = {book}
+                />
         );
       })}
     </section>

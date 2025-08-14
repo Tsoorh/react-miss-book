@@ -1,4 +1,4 @@
-import { BookIndex } from "../cmps/BookIndex.jsx";
+import { BookList } from "../cmps/BookList.jsx";
 import { bookService } from "../services/book.service.js";
 const { useState, useEffect } = React;
 
@@ -79,7 +79,7 @@ export function Books() {
         </div>
       </section>
       <h1>Books</h1>
-      <BookIndex 
+      <BookList 
       filterBy = {filterBy}/>
     </section>
   );
