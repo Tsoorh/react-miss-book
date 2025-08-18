@@ -2,7 +2,7 @@ import { storageService } from "./async-storage.service.js";
 import { utilService } from "./util.service.js";
 
 const BOOK_KEY = "bookDB";
-_createBooks();
+// _createBooks();
 
 export const bookService = {
   query,
@@ -17,16 +17,19 @@ var booksDemo = [
   {
     id: "OXeMG8wNskc",
     title: "metus hendrerit",
+    description:"placerat nisi sodales suscipit tellus",
     listPrice: { amount: 109, currencyCode: "ILS", isOnSale: false },
   },
   {
     id: "OXeaG8sNsoc",
     title: "coca cola",
+    description:"wealawrat nishsdi soawales sueqwqscipit tellus",
     listPrice: { amount: 60, currencyCode: "ILS", isOnSale: true },
   },
   {
     id: "OXeLG8wRsK1",
     title: "shrek book",
+    description:"weajydsat niftsdi sdeea ssoawales sbookslodfeit lifeless",
     listPrice: { amount: 170, currencyCode: "ILS", isOnSale: false },
   },
 ];
@@ -49,6 +52,7 @@ function _createBook(
 }
 
 function query(filterBy) {
+  _createBooks();
   return storageService.query(BOOK_KEY).then((books) => {
     if (filterBy.txt) {
       const regExp = new RegExp(filterBy.txt, "i");

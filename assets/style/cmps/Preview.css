@@ -1,0 +1,20 @@
+.modal-preview{
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%) ;
+    height: 30em;
+    width: 25em;
+    transition: 1.5s ease-in-out;
+    border-radius: 3em ;
+    border: 0.2em rgb(217, 208, 208) solid;
+    background-color: #b2b2b2;
+}
+
+.modal-btn{
+    position: absolute;
+    top: -0.5em;
+    right: -0.5em;
+    border-radius: 50%;
+}
