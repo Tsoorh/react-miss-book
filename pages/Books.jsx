@@ -17,12 +17,6 @@ export function Books() {
     setAddBook(prev=>!prev);
   }
 
-  useEffect(() => {
-    bookService.query(filterBy)
-  }, [filterBy]);
-
-
-
 
   return (
     <section className="books-page">

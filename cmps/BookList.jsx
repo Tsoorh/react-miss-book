@@ -3,7 +3,7 @@ import { bookService } from "../services/book.service.js";
 import { BookPreview } from "./BookPreview.jsx";
 
 export function BookList(props) {
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState(null);
 
   useEffect(()=>{
     bookService
@@ -16,6 +16,7 @@ export function BookList(props) {
     });
   },[props.filterBy]);
 
+  if(!books) return <div>Loading...</div>
   return (
     <section className="books-index-container">
       {books.map((book) => {
