@@ -31,9 +31,9 @@ export function Books() {
         filterBy={filterBy}
       />
       <h1>Books</h1>
+      <button onClick={onHandleAddBook}>Add new Book</button>
       <BookList
       filterBy = {filterBy}/>
-      <button onClick={onHandleAddBook}>Add new Book</button>
       {addBook&&
       <BookEdit
       onHandleAddBook = {onHandleAddBook}

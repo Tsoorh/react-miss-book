@@ -1,7 +1,6 @@
 .books-page{
     text-align: center;
     width: 100%;
-
 }
 
 .filters{
@@ -9,7 +8,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-border-bottom: 0.1em rgb(192, 192, 192) solid;}
+    border-bottom: 0.1em rgb(192, 192, 192) solid;}
 
 .books-index-container{
     display: grid;
@@ -28,15 +27,6 @@ border-bottom: 0.1em rgb(192, 192, 192) solid;}
 
 .book-div>h3{
     text-decoration: underline solid grey 0.1em;
-}
-
-input[type=text]{
-    border-radius: 0.5em;
-    border: solid 0.1em;
-    height: 2.2em;
-    border:none;
-    background-color: rgba(240, 240, 240, 0.42);
-    padding: 0.4em;
 }
 
 

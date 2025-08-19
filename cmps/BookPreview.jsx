@@ -8,7 +8,6 @@ export function BookPreview(props) {
   function onHandleClick(){
     setPreviewBook(prev=>!prev);
   }
-  console.log(props.book);
   
 
   return (
