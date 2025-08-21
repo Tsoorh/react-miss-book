@@ -1,11 +1,11 @@
 
-export function BookModal(props){
+export function BookModal({book,onHandleClick}){
 
     return <section className="modal-preview">
-        <button className="modal-btn" onClick={props.onHandleClick}> X </button>
-          <h3>{props.book.title}</h3>
-          <p>{props.book.listPrice.amount} {props.book.listPrice.currencyCode}</p>
-          <p>{props.book.description}</p>
-          <p>{props.book.isOnSale?"In stock":"Sold out"}</p>
+        <button className="modal-btn" onClick={onHandleClick}> X </button>
+          <h3>{book.title}</h3>
+          <p>{book.listPrice.amount} {book.listPrice.currencyCode}</p>
+          <p>{book.description}</p>
+          <p>{book.listPrice.isOnSale?"In stock":"Sold out"}</p>
       </section>
 }

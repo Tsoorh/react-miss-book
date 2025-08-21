@@ -15,7 +15,6 @@ export function BookEdit(props) {
 
   function onHandleAdd(ev) {
     ev.preventDefault();
-    console.log(newBook);
     if (
       newBook.title !== "" &&
       newBook.listPrice.amount > 0 &&
