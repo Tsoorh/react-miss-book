@@ -31,6 +31,7 @@ export function Books() {
       {addBook&&
       <BookEdit
       onHandleAddBook = {onHandleAddBook}
+      setfilterBy={setfilterBy}
       />
       }
     </section>

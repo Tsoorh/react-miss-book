@@ -1,4 +1,6 @@
 const {useState} = React
+import { LongTxt } from "./LongTxt.jsx";
+
 export function BookModal({ book, onHandleClick }) {
   // part1 ex
   // return <section className="modal-preview">
@@ -54,8 +56,11 @@ export function BookModal({ book, onHandleClick }) {
         <span className={book.listPrice.amount>150&&"red" || book.listPrice.amount<20&&"green" || ""}>{book.listPrice.amount}</span> {book.listPrice.currencyCode}
       </p>
 
-      <p>Langueage:{book.language}</p>
-      <p>{book.description}</p>
+      <p>Language: {book.language}</p>
+      <LongTxt
+      txt = {book.description}
+      />
+      {/* <p>{book.description}</p> */}
       {book.listPrice.isOnSale ? <div> <p>In stock!</p> <img src="../assets/img/for-sale.svg"/></div> : <p>Sold out</p>}
       </div>
       {!imageLoad &&<h2 className="loading-h2">Loading photo...</h2>}

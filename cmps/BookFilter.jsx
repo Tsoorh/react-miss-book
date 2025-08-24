@@ -17,7 +17,8 @@ export function BookFilter(props) {
       .catch((err) => {
         console.log(err);
       });
-  }, [props]);
+  }, []);
+  
   function onHandleCheckbox(event) {
     const { value } = event.target;
     props.setfilterBy((prev) => ({ ...prev, availability: value }));
